@@ -1,0 +1,74 @@
+h1{
+  font-size:24px;
+  padding-left:16px;
+  border-left:8px solid chocolate;
+}
+
+.box{
+  width:100px;
+  height:100px;
+  margin-top:200px;
+  border:8px solid rgba(207, 96, 21, 0.938);
+  border-right-color: transparent;
+  border-radius: 50%;
+
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-delay: .1s;
+  transition-timing-function:cubic-bezier(0.83, 0.22, 0.47, 1.03);
+  animation:spin 1.9s infinite linear;
+}
+@keyframes spin{
+  0%{transform:none}
+  100%{
+    transform:rotate(360deg);
+  }
+}
+.message{
+  width: 300px;
+  padding:8px 16px;
+  background-color:pink;
+  color:#2c2c2c;
+  border-radius: 4px;
+  /* box-shadow: 0 5px 10px rgba(0,0,0,0.2); */
+  /* シャドウ　右　下　ぼかし　色 */
+  box-shadow: 3px 7px 15px gray;
+  position :fixed;
+  left:32px;
+  top:200px;
+  /* animation:popup 1.5s forwards; */
+}
+.message:hover{
+  animation:popup 1.5s ease-out forwards;
+}
+@keyframes popup{
+  0%{
+    transform:translateY(0px);
+    
+  }
+  20%{
+    transform:translateY(50px);
+    /* opacity:0.8; */
+  }
+  80%{
+    transform:none;
+  }
+  100%{
+    transform:translateY(0px);
+    /* opacity:0.8; */
+  }
+}
+button{
+  width: 300px;
+  padding:8px 16px;
+  background-color:black;
+  color:#fff;
+  border-radius: 4px;
+  /* box-shadow: 0 5px 10px rgba(0,0,0,0.2); */
+  /* シャドウ　右　下　ぼかし　色 */
+  box-shadow: 3px 7px 15px gray;
+  position :fixed;
+  right:32px;
+  top:200px;
+}
+
